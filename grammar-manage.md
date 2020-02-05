@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-05-12"
+  years: 2018, 2020
+lastupdated: "2020-02-04"
 
 subcollection: speech-to-text-icp
 
@@ -25,7 +25,7 @@ subcollection: speech-to-text-icp
 # Managing grammars
 {: #manageGrammars}
 
-The customization interface includes the `POST /v1/customizations/{customization_id}/grammars/{grammar_name}` method for adding a grammar to a custom language model. For more information, see [Add a grammar to the custom language model](/docs/services/speech-to-text-icp?topic=speech-to-text-icp-grammarAdd#addGrammar). The interface also includes the following methods for listing and deleting grammars for a custom language model.
+The customization interface includes the `POST /v1/customizations/{customization_id}/grammars/{grammar_name}` method for adding a grammar to a custom language model. For more information, see [Add a grammar to the custom language model](/docs/speech-to-text-icp?topic=speech-to-text-icp-grammarAdd#addGrammar). The interface also includes the following methods for listing and deleting grammars for a custom language model.
 {: shortdesc}
 
 ## Listing grammars for a custom language model
