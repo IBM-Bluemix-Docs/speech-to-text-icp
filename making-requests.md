@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-06-29"
+  years: 2018, 2020
+lastupdated: "2020-02-04"
 
 subcollection: speech-to-text-icp
 
@@ -69,7 +69,7 @@ Use the following steps to learn your API key:
     ```
     {: pre}
 
-    For more information, see the [Getting started tutorial](/docs/services/speech-to-text-icp?topic=speech-to-text-icp-gettingStarted#transcribe) and the following section.
+    For more information, see the [Getting started tutorial](/docs/speech-to-text-icp?topic=speech-to-text-icp-gettingStarted#transcribe) and the following section.
 
 ## Making an authenticated HTTP request
 {: #httpRequest}
@@ -92,7 +92,7 @@ The components provide the following information. The `{}` (braces) indicate var
 
 Many methods have longer names and include path parameters that you must specify as part of the request. Most examples also include request headers, query parameters, and other values. Substitute literal values for any variables that are enclosed in braces. Enter all other elements of an example exactly as shown.
 
-The examples in this documentation use the `curl` command to call the service's HTTP interfaces. For more information, see [Using the curl examples](/docs/services/speech-to-text-icp?topic=speech-to-text-icp-gettingStarted#getting-started-curl).
+The examples in this documentation use the `curl` command to call the service's HTTP interfaces. For more information, see [Using the curl examples](/docs/speech-to-text-icp?topic=speech-to-text-icp-gettingStarted#getting-started-curl).
 {: note}
 
 ## Making an authenticated WebSocket request
@@ -105,9 +105,9 @@ wss://{icp_cluster_host}/speech-to-text/api/v1/recognize
 ```
 {: pre}
 
-The `{icp_cluster_host}` is required to specify the name or IP address of the host on which the cluster is deployed. For information about making authenticated requests to the WebSocket interface, see [The WebSocket interface](/docs/services/speech-to-text-icp?topic=speech-to-text-icp-websockets).
+The `{icp_cluster_host}` is required to specify the name or IP address of the host on which the cluster is deployed. For information about making authenticated requests to the WebSocket interface, see [The WebSocket interface](/docs/speech-to-text-icp?topic=speech-to-text-icp-websockets).
 
-You cannot use JavaScript to call the WebSocket interface from a browser. The `watson-token` parameter that is available with the `/v1/recognize` method does not accept API keys. See the [Known limitations](/docs/services/speech-to-text-icp?topic=speech-to-text-icp-release-notes#limitations) in the release notes for information about working around this limitation.
+You cannot use JavaScript to call the WebSocket interface from a browser. The `watson-token` parameter that is available with the `/v1/recognize` method does not accept API keys. See the [Known limitations](/docs/speech-to-text-icp?topic=speech-to-text-icp-release-notes#limitations) in the release notes for information about working around this limitation.
 {: important}
 
 ## Disabling SSL verification
