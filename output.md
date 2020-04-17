@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-04-17"
 
 subcollection: speech-to-text-icp
 
@@ -308,7 +308,7 @@ The following example request sets the `keywords` parameter to a URL-encoded arr
 curl -X POST -u "apikey:{apikey}"
 --header "Content-Type: audio/flac"
 --data-binary @{path}audio-file.flac
-"https://{icp_cluster_host}{:port}/speech-to-text/api/v1/recognize?keywords=%22colorado%22%2C%22tornado%22%2C%22tornadoes%22&keywords_threshold=0.5"
+"https://{icp_cluster_host}{:port}/speech-to-text/api/v1/recognize?keywords=colorado%2Ctornado%2Ctornadoes&keywords_threshold=0.5"
 ```
 {: pre}
 
@@ -1138,7 +1138,7 @@ The following example requests numeric redaction with a recognition request by s
 curl -X POST -u "apikey:{apikey}"
 --header "Content-Type: audio/wav"
 --data-binary @{path}audio-file.wav
-"https://{icp_cluster_host}{:port}/speech-to-text/api/v1/recognize?&redaction=true&max_alternatives=3&keywords=%22birth%22%2C%22birthday%22&keywords_threshold=0.5"
+"https://{icp_cluster_host}{:port}/speech-to-text/api/v1/recognize?&redaction=true&max_alternatives=3&keywords=birth%2Cbirthday&keywords_threshold=0.5"
 ```
 {: pre}
 
