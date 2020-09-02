@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-09-02"
 
 subcollection: speech-to-text-icp
 
@@ -457,7 +457,7 @@ The files and their schemas are subject to change in a future release.
       Insights for each utterance. The data includes the tone, sentiment,
       and topic name. The following JSON file describes the schemas that
       the file uses:
-      <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech_analytics/utterance_transcripts_schema.json" download="utterance_transcripts_schema.json">utterance_transcripts_schema.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>
+      <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/utterance_transcripts_schema.json" download="utterance_transcripts_schema.json">utterance_transcripts_schema.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>
     </td>
   </tr>
 </table>

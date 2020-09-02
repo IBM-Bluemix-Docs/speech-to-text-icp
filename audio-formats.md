@@ -2,12 +2,12 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-09-02"
 
 subcollection: speech-to-text-icp
-
 ---
 
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
@@ -547,18 +547,18 @@ The following freeware tools are available to convert your audio from one format
 -   Sound eXchange (SoX) ([sox.sourceforge.net ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://sox.sourceforge.net){: new_window})
 -   FFmpeg ([ffmpeg.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ffmpeg.org){: new_window})
 -   Audacity&reg; ([audacityteam.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.audacityteam.org/){: new_window})
--   For Ogg format with the Opus codec, **opus-tools** ([opus-codec.org/downloads/ ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://opus-codec.org/downloads/){: new_window})
+-   For Ogg format with the Opus codec, **opus-tools** ([opus-codec.org](https://opus-codec.org/){: external}).
 
 These tools offer cross-platform support for multiple audio formats. Moreover, you can use many of the tools to play your audio. Do not use the tools to violate applicable copyright laws.
 
 ### Converting to audio/ogg with the Opus codec
 {: #conversionOgg}
 
-The [**opus-tools** ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://opus-codec.org/downloads/){: new_window} include three command-line utilities for working with Ogg audio in the Opus codec:
+The [**opus-tools**](https://opus-codec.org/release/dev/2018/09/18/opus-tools-0_2.html){: external} include three command-line utilities for working with Ogg audio in the Opus codec:
 
--   The [**opusenc** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mf4.xiph.org/jenkins/view/opus/job/opus-tools/ws/man/opusenc.html){: new_window} utility encodes audio from WAV, FLAC, and other formats to Ogg with the Opus codec. The page shows how to compress audio streams. Compression is useful for passing real-time audio to the service.
--   The [**opusdec** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mf4.xiph.org/jenkins/view/opus/job/opus-tools/ws/man/opusdec.html){: new_window} utility decodes audio from the Opus codec to uncompressed PCM WAV files.
--   The [**opusinfo** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mf4.xiph.org/jenkins/view/opus/job/opus-tools/ws/man/opusinfo.html){: new_window} utility provides information about and validity checking for Opus files.
+-   The [**opusenc**](https://opus-codec.org/docs/opus-tools/opusenc.html){: external} utility encodes audio from WAV, FLAC, and other formats to Ogg with the Opus codec. The page shows how to compress audio streams. Compression is useful for passing real-time audio to the service.
+-   The [**opusdec**](https://opus-codec.org/docs/opus-tools/opusdec.html){: external} utility decodes audio from the Opus codec to uncompressed PCM WAV files.
+-   The [**opusinfo**](https://opus-codec.org/docs/opus-tools/opusinfo.html){: external} utility provides information about and validity checking for Opus files.
 
 Many users send WAV files for speech recognition. With the service's 100 MB data limit for most requests, the WAV format reduces the amount of audio that can be recognized with a single request. Using the **opusenc** command to convert the audio to the preferred `audio/ogg:codecs=opus` format can greatly increase the amount of audio that you can send with a recognition request.
 
