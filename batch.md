@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-09-02"
 
 subcollection: speech-to-text-icp
 
@@ -85,7 +85,7 @@ The {{site.data.keyword.speechtotextshort}}: Customer Care service supports the 
 For example, you can use either of the following COS servers:
 
 -   The Minio Cloud Object Storage server that comes with {{site.data.keyword.cloud}} Private. For more information, see [Minio ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/manage_cluster/minio.html){: new_window} in the {{site.data.keyword.cloud_notm}} Private documentation and [Minio Private Cloud Storage ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://minio.io/){: new_window}.
--   The {{site.data.keyword.cos_full}} server. For more information, see [About {{site.data.keyword.cos_full}}](/docs/cloud-object-storage?topic=cloud-object-storage-about).
+-   The {{site.data.keyword.cos_full}} server. For more information, see [About {{site.data.keyword.cos_full}}](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage).
 
 ### COS credentials
 {: #batchCOSCredentials}
