@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-09-02"
+lastupdated: "2020-09-16"
 
 subcollection: speech-to-text-icp
 
@@ -175,7 +175,7 @@ These speaker-level fields have the same meaning as the corresponding conversati
 ### Example additions to output file
 {: #analyticsJSONExample}
 
-The following example is identical to the example in [Example output file](/docs/speech-to-text-icp?topic=speech-to-text-icp-batch#batchResultsExample). It submits the same simple brief file, <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/audio-file.flac" download="audio-file.flac">audio-file.flac <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>, and uses the same COS bucket for both input and output. However, this example sets the `speech_analytics` query parameter to `true`.
+The following example is identical to the example in [Example output file](/docs/speech-to-text-icp?topic=speech-to-text-icp-batch#batchResultsExample). It submits the same simple brief file, [audio-file.flac](https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/audio-file.flac){: external}, and uses the same COS bucket for both input and output. However, this example sets the `speech_analytics` query parameter to `true`.
 
 ```bash
 curl -X POST -u "apikey:{apikey}"
@@ -297,104 +297,23 @@ The **Conversation.zip** file contains information about the overall conversatio
 The files and their schemas are subject to change in a future release.
 {: note}
 
-<table>
-  <caption>Table 1. Files in the Conversation.zip file</caption>
-  <tr>
-    <th style="text-align:left">File name</th>
-    <th style="text-align:left">Description</th>
-  </tr>
-  <tr>
-    <td style="vertical-align:top">
-      **conversation_data.json**
-    </td>
-    <td>
-      Input data for topic modeling. The data is converted from
-      {{site.data.keyword.speechtotextshort}} and
-      {{site.data.keyword.nlushort}} results. Each line of the file
-      is a separate JSON object. This format accommodates topic-modeling
-      analysis. The following JSON file describes the schemas that the file
-      uses:
-      <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/conversation_data_schema.json" download="conversation_data_schema.json">conversation_data_schema.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top">
-      **conversation_data.json.summary_model.json**
-    </td>
-    <td>
-      Intermediate data for topic-modeling analysis. The data is
-      generated from the file **conversation_data.json**. The following
-      JSON file describes the schemas that the file uses:
-      <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/conversation_data_summary_model_schema.json" download="conversation_data_summary_model_schema.json">conversation_data_summary_model_schema.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>
-  </tr>
-  <tr>
-    <td style="vertical-align:top">
-      **conversation_aggregated_insights.json**
-    </td>
-    <td>
-      Aggregated insights for the overall conversation. The data includes
-      the distribution of overall sentiments and tones. It also includes
-      the distribution of keywords, sentiments, and tones for each topic.
-      The following JSON file describes the schemas that the file uses:
-      <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/conversation_aggregated_insights_schema.json" download="conversation_aggregated_insights_schema.json">conversation_aggregated_insights_schema.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top">
-      **conversation_transcripts.json**
-    </td>
-    <td>
-      Insights for each conversation. The data includes the aggregated
-      tone, sentiment, and topic for the conversation. The following JSON
-      file describes the schemas that the file uses:
-      <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/conversation_transcripts_schema.json" download="conversation_transcripts_schema.json">conversation_transcripts_schema.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>
-    </td>
-  </tr>
-</table>
+| File name | Description |
+|-----------|-------------|
+| **conversation_data.json** | Input data for topic modeling. The data is converted from {{site.data.keyword.speechtotextshort}} and {{site.data.keyword.nlushort}} results. Each line of the file is a separate JSON object. This format accommodates topic-modeling analysis. The following JSON file describes the schemas that the file uses: [conversation_data_schema.json](https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/conversation_data_schema.json){: external} |
+| **conversation_data.json.summary_model.json** | Intermediate data for topic-modeling analysis. The data is generated from the file **conversation_data.json**. The following JSON file describes the schemas that the file uses: [conversation_data_summary_model_schema.json](https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/conversation_data_summary_model_schema.json){: external} |
+| **conversation_aggregated_insights.json** | Aggregated insights for the overall conversation. The data includes the distribution of overall sentiments and tones. It also includes the distribution of keywords, sentiments, and tones for each topic. The following JSON file describes the schemas that the file uses: [conversation_aggregated_insights_schema.json](https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/conversation_aggregated_insights_schema.json){: external} |
+| **conversation_transcripts.json** | Insights for each conversation. The data includes the aggregated tone, sentiment, and topic for the conversation. The following JSON file describes the schemas that the file uses: [conversation_transcripts_schema.json](https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/conversation_transcripts_schema.json){: external} |
+{: caption="Table 1. Files in the Conversation.zip file"}
 
 Table 2 describes the directories that the service includes in the **Conversation.zip** file. These directories contain files and subdirectories that contain detailed topic-modeling results.
 
-<table>
-  <caption>Table 2. Directories in the Conversation.zip file</caption>
-  <tr>
-    <th style="text-align:left">Directory name</th>
-    <th style="text-align:left">Description</th>
-  </tr>
-  <tr>
-    <td style="vertical-align:top">
-      **conversation_data.json.topic_model**
-    </td>
-    <td>
-      Hierarchical topic-modeling results.
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top">
-      **conversation_data.json.topic_predict**
-    </td>
-    <td>
-      Topic assignment for each conversation.
-    </td>
-  </tr>
-
-  <tr>
-    <td style="vertical-align:top">
-      **conversation_data.json.topic_word_mapping_sentences**
-    </td>
-    <td>
-     Key topic word extraction for conversation sentences.
-    </td>
-  </tr>
-
-  <tr>
-    <td style="vertical-align:top">
-      **conversation_data.json.topic_ngram_mapping_sentences**
-    </td>
-    <td>
-      Key n-gram extraction for conversation sentences.
-    </td>
-  </tr>
-</table>
+| Directory name | Description |
+|----------------|-------------|
+| **conversation_data.json.topic_model** | Hierarchical topic-modeling results. |
+| **conversation_data.json.topic_predict** | Topic assignment for each conversation. |
+| **conversation_data.json.topic_word_mapping_sentences** | Key topic word extraction for conversation sentences. |
+| **conversation_data.json.topic_ngram_mapping_sentences** | Key n-gram extraction for conversation sentences. |
+{: caption="Table 2. Directories in the Conversation.zip file"}
 
 ## Speaker results
 {: #analyticsSpeakerResults}
@@ -406,100 +325,20 @@ Table 3 describes the files that the service includes in the **Speaker.zip** fil
 The files and their schemas are subject to change in a future release.
 {: note}
 
-<table>
-  <caption>Table 3. Files in the Speaker.zip file</caption>
-  <tr>
-    <th style="text-align:left">File name</th>
-    <th style="text-align:left">Description</th>
-  </tr>
-  <tr>
-    <td style="vertical-align:top">
-      **utterance_data.csv**
-    </td>
-    <td>
-      Input data for topic modeling. The data is converted from
-      {{site.data.keyword.speechtotextshort}} and
-      {{site.data.keyword.nlushort}} results. The file includes
-      the utterance ID, the sentiment in JSON format, the tone in
-      JSON format, and the keywords in JSON format. The information
-      is used for insight aggregation.
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top">
-      **utterance_data.csv.summary_model.json**
-    </td>
-    <td>
-      Intermediate data for topic modeling. The data is generated from
-      the file **utterance_data.csv**. The information is used for
-      topic-modeling analysis. The following JSON file describes the
-      schemas that the file uses:
-      <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/utterance_data.csv.summary_model_schema.json" download="utterance_data.csv.summary_model_schema.json">utterance_data.csv.summary_model_schema.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top">
-      **utterance_aggregated_insights.json**
-    </td>
-    <td>
-      Aggregated insights for utterances. The data includes the
-      distribution of overall sentiments and tones. It also includes
-      the distribution of keywords, sentiments, and tones for each topic.
-      The following JSON file describes the schemas that the file uses:
-      <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/utterance_aggregated_insights_schema.json" download="utterance_aggregated_insights_schema.json">utterance_aggregated_insights_schema.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top">
-      **utterance_transcripts.json**
-    </td>
-    <td>
-      Insights for each utterance. The data includes the tone, sentiment,
-      and topic name. The following JSON file describes the schemas that
-      the file uses:
-      <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/utterance_transcripts_schema.json" download="utterance_transcripts_schema.json">utterance_transcripts_schema.json <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>
-    </td>
-  </tr>
-</table>
+| File name | Description |
+|-----------|-------------|
+| **utterance_data.csv** | Input data for topic modeling. The data is converted from {{site.data.keyword.speechtotextshort}} and {{site.data.keyword.nlushort}} results. The file includes the utterance ID, the sentiment in JSON format, the tone in JSON format, and the keywords in JSON format. The information is used for insight aggregation. |
+| **utterance_data.csv.summary_model.json** | Intermediate data for topic modeling. The data is generated from the file **utterance_data.csv**. The information is used for topic-modeling analysis. The following JSON file describes the schemas that the file uses: [utterance_data.csv.summary_model_schema.json](https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/utterance_data.csv.summary_model_schema.json){: external} |
+| **utterance_aggregated_insights.json** | Aggregated insights for utterances. The data includes the distribution of overall sentiments and tones. It also includes the distribution of keywords, sentiments, and tones for each topic. The following JSON file describes the schemas that the file uses: [utterance_aggregated_insights_schema.json](https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/utterance_aggregated_insights_schema.json){: external} |
+| **utterance_transcripts.json** | Insights for each utterance. The data includes the tone, sentiment, and topic name. The following JSON file describes the schemas that the file uses: [utterance_transcripts_schema.json](https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/speech-analytics/utterance_transcripts_schema.json){: external} |
+{: caption="Table 3. Files in the Speaker.zip file"}
 
 Table 4 describes the directories that the service includes in the **Speaker.zip** file. These directories contain files and subdirectories that contain detailed topic-modeling results.
 
-<table>
-  <caption>Table 4. Directories in the Speaker.zip file</caption>
-  <tr>
-    <th style="text-align:left">Directory name</th>
-    <th style="text-align:left">Description</th>
-  </tr>
-  <tr>
-    <td style="vertical-align:top">
-      **utterance_data.csv.topic_model**
-    </td>
-    <td>
-      Hierarchical topic-modeling results.
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top">
-      **utterance_data.csv.topic_predict**
-    </td>
-    <td>
-      Topic assignment for each utterance.
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top">
-      **utterance_data.csv.topic_word_mapping_sentences**
-    </td>
-    <td>
-      Key topic word extraction for each utterance.
-    </td>
-  </tr>
-  <tr>
-    <td style="vertical-align:top">
-      **utterance_data.csv.topic_ngram_mapping_sentences**
-    </td>
-    <td>
-      Key n-gram extraction for each utterance.
-    </td>
-  </tr>
-</table>
+| Directory name | Description |
+|----------------|-------------|
+| **utterance_data.csv.topic_model** | Hierarchical topic-modeling results. |
+| **utterance_data.csv.topic_predict** | Topic assignment for each utterance. |
+| **utterance_data.csv.topic_word_mapping_sentences** | Key topic word extraction for each utterance. |
+| **utterance_data.csv.topic_ngram_mapping_sentences** | Key n-gram extraction for each utterance. |
+{: caption="Table 4. Directories in the Speaker.zip file"}

@@ -19,7 +19,6 @@ subcollection: speech-to-text-icp
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
-{:download: .download}
 {:gif: data-image-type='gif'}
 
 # Installing and configuring the service
