@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-09-02"
+lastupdated: "2020-09-16"
 
 subcollection: speech-to-text-icp
 
@@ -615,7 +615,7 @@ The differences noted for speech recognition parameters in the last two bullets 
 ### Example output file
 {: #batchResultsExample}
 
-The following example shows the output for a brief audio file, <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/audio-file.flac" download="audio-file.flac">audio-file.flac <img src="../../icons/launch-glyph.svg" alt="External link icon" title="External link icon"></a>. The batch-processing request uses a single COS bucket for input and output. The request includes the minimum required parameters.
+The following example shows the output for a brief audio file, [audio-file.flac](https://watson-developer-cloud.github.io/doc-tutorial-downloads/speech-to-text/audio-file.flac){: external}. The batch-processing request uses a single COS bucket for input and output. The request includes the minimum required parameters.
 
 ```bash
 curl -X POST -u "apikey:{apikey}"
