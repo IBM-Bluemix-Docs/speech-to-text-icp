@@ -1,14 +1,15 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-02-04"
+  years: 2018, 2021
+lastupdated: "2021-05-18"
 
 subcollection: speech-to-text-icp
 
 ---
 
 {:shortdesc: .shortdesc}
+{:external: target="_blank" .external}
 {:new_window: target="_blank"}
 {:tip: .tip}
 {:important: .important}
@@ -24,7 +25,7 @@ subcollection: speech-to-text-icp
 # Installing and configuring the service
 {: #install}
 
-{{site.data.keyword.ibmwatson}} {{site.data.keyword.speechtotextshort}}: Customer Care is supported on [{{site.data.keyword.icpfull}} version 3.1.0 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/kc_welcome_containers.html){: new_window} with Kubernetes version 1.10.0 or later. Follow these instructions to install and configure the {{site.data.keyword.speechtotextshort}}: Customer Care service.
+{{site.data.keyword.ibmwatson}} {{site.data.keyword.speechtotextshort}}: Customer Care is supported on [{{site.data.keyword.icpfull}} version 3.1.0](https://www.ibm.com/docs/en/cloud-private/3.1.0){: external} with Kubernetes version 1.10.0 or later. Follow these instructions to install and configure the {{site.data.keyword.speechtotextshort}}: Customer Care service.
 {: shortdesc}
 
 ## Software requirements
