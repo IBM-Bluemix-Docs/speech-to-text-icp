@@ -9,6 +9,7 @@ subcollection: speech-to-text-icp
 ---
 
 {:shortdesc: .shortdesc}
+{:external: target="_blank" .external}
 {:new_window: target="_blank"}
 {:tip: .tip}
 {:important: .important}
